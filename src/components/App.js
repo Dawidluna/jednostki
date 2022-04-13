@@ -18,7 +18,7 @@ export default class App extends React.Component {
      updateState(value, x) {
         switch(x) {
             case 1:
-                this.setState({dataType: value, unit: -1});
+                this.setState({dataType: value, unit: 1});
                 break;
             case 2:
                 this.setState({unit: value});
@@ -32,7 +32,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div id="app">
-                <InputFields updateState={this.updateState} dataType={this.state.dataType} />
+                <InputFields updateState={this.updateState} dataType={this.state.dataType} unit={this.state.unit} />
                 <Results dataType={this.state.dataType} unit={this.state.unit} dataValue={this.state.value} />
             </div>
         );

@@ -20,7 +20,7 @@ export default class InputFields extends React.Component {
       return(
           <div id="inputs">
               <DataType updateData={this.updateData} />
-              <Unit updateData={this.updateData} dataType={this.props.dataType} />
+              <Unit updateData={this.updateData} dataType={this.props.dataType} unit={this.props.unit}/>
               <InputValue updateData={this.updateData} />
           </div>
       );
